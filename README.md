@@ -48,7 +48,8 @@ Public class Autonomous_Delivery
             For (int i=0;i<h;i++) for (int j=0;j<w;j++) terrain[i][j] = 1.0;
         }
 
-        Boolean inBounds(Pos p) { return p.r >=0 && p.r < height && p.c >= 0 && p.c < width; }
+        Boolean inBounds(Pos p) 
+        { return p.r >=0 && p.r < height && p.c >= 0 && p.c < width; }
         Boolean passable(Pos p) { return inBounds(p) && !blocked[p.r][p.c]; }
         Boolean passable(Pos p, int time) {
             If (!inBounds(p) || blocked[p.r][p.c]) return false;
